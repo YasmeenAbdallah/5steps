@@ -4,6 +4,7 @@
     <meta charset="<?php bloginfo('charset');?>">
     <!--get the ttile from bloginfo-->
     <title><?php bloginfo('name');?></title> 
+    <!--Pings back the links found in a post.-->
     <link rel="pingback" href="<?php  bloginfo('pingback_url');?>"/>
     <?php wp_head(); ?>
     <!-- UIkit CSS -->
