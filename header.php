@@ -7,11 +7,7 @@
     <!--Pings back the links found in a post.-->
     <link rel="pingback" href="<?php  bloginfo('pingback_url');?>"/>
     <?php wp_head(); ?>
-    <!-- UIkit CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.3.0/dist/css/uikit.min.css" />
-    <!-- FontAwesome Css -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+   
     <!--the main css stylesheet-->
     <link rel="stylesheet" href="style.css">   
 </head>
