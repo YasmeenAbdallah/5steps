@@ -7,8 +7,9 @@ function add_styles(){
      //UIkit CSS 
     wp_enqueue_style( 'uikitCSS','//cdn.jsdelivr.net/npm/uikit@3.5.3/dist/css/uikit.min.css' );
     //fontawesome css
-    
     wp_enqueue_style( 'fontawesome css', '//use.fontawesome.com/releases/v5.8.1/css/all.css');
+     //my main css file 
+    wp_enqueue_style( 'css',get_template_directory_uri() . 'style.css');
 }
 /*
  function to add my scripts sheets
