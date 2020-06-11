@@ -9,7 +9,7 @@ function add_styles(){
     //fontawesome css
     wp_enqueue_style( 'fontawesome css', '//use.fontawesome.com/releases/v5.8.1/css/all.css');
      //my main css file 
-    wp_enqueue_style( 'css',get_template_directory_uri() . './des/style.css');
+    wp_enqueue_style( 'css',get_template_directory_uri().'/des/style.css');
 }
 /*
  function to add my scripts sheets
@@ -24,11 +24,27 @@ function add_script(){
 }
 
 /*
+add custom menu support
+Registers a navigation menu location for a theme.
+*/ 
+function register_custom_menu(){
+    register_nav_menu('uikit-menu',__('nav bar'));
+}
+/* function to control the nav  */
+function uikit_menu(){
+    wp_nav_menu();
+}
+
+/*
 add_action() finction
 responsinle for putting the scripts file in the main page
 */
 
 add_action( 'wp_enqueue_scripts','add_styles');
 add_action('wp_enqueue_scripts','add_script');
+
+//add_action for menu
+ 
+add_action('init','register_custom_menu');
 
 ?>

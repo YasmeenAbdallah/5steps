@@ -1,3 +1,8 @@
 /*!
     Theme Name: 5stpes
    */
+.section__type-footer {
+  background-color: #eab22c;
+  height: 200px;
+  width: 100%;
+}

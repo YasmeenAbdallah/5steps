@@ -8,8 +8,7 @@
     <link rel="pingback" href="<?php  bloginfo('pingback_url');?>"/>
     <?php wp_head(); ?>
    
-    <!--the main css stylesheet-->
-    <link rel="stylesheet" href="style.css">   
+     
 </head>
 <!-- START section__type-nav -->
 <nav class="uk-navbar-container" uk-navbar>
