@@ -9,7 +9,7 @@ function add_styles(){
     //fontawesome css
     wp_enqueue_style( 'fontawesome css', '//use.fontawesome.com/releases/v5.8.1/css/all.css');
      //my main css file 
-    wp_enqueue_style( 'css',get_template_directory_uri() . 'style.css');
+    wp_enqueue_style( 'css',get_template_directory_uri() . './des/style.css');
 }
 /*
  function to add my scripts sheets

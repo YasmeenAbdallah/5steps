@@ -3,7 +3,8 @@ const gulp = require("gulp");
 
 // define sass
 const sass = require("gulp-sass");
-
+//php minfy
+//const phpMinify = require("@cedx/gulp-php-minify");
 //compile sass
 sass.compiler = require("node-sass");
 
@@ -22,12 +23,13 @@ gulp.task("sass", () => {
 gulp.task("watch", () => {
   gulp.watch("./scss/**/*.*", gulp.series("sass"));
 });
+/*
 // compress php files
 gulp.task("compressPhp", () =>
   gulp
-    .src("*.php", { read: false })
+    .src("index.php", { read: false })
     .pipe(phpMinify())
-    .pipe(gulp.dest("min-index.php"))
-);
+    .pipe(gulp.dest("./des"))
+);*/
 //work the tasks sequence
-gulp.task("default", gulp.series("sass", "compressPhp", "watch"));
+gulp.task("default", gulp.series("sass", "watch"));
