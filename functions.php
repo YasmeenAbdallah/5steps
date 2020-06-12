@@ -32,7 +32,11 @@ function register_custom_menu(){
 }
 /* function to control the nav  */
 function uikit_menu(){
-    wp_nav_menu();
+    wp_nav_menu(array(
+        'theme_location' =>'uikit-menu',
+        'menu_class' =>'uk-navbar-nav'
+
+    ));
 }
 
 /*
