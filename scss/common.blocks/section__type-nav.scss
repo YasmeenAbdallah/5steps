@@ -1,5 +1,7 @@
 .section__type-nav {
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  .uk-navbar-left {
+    margin: 0px 70px;
+  }
   .uk-navbar-right {
     margin-right: 70px;
     margin-top: 10px;
@@ -10,14 +12,21 @@
           font-size: 15px;
           font-family: monospace;
         }
+        .nav__type-dropdown {
+          display: none !important;
+        }
         .nav__cta {
+          display: block;
           background-color: $color__main;
+          height: 40px;
+
           border-radius: 4px;
           font-weight: bold;
-          margin-top: 5px;
+          margin-top: 20px;
           a {
             color: $color__white;
-            font-weight: 800;
+            padding-bottom: 37px;
+
             span {
               /*nav__link::before {
     border-bottom: 2px solid #303d71 !important;

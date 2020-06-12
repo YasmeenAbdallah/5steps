@@ -15,10 +15,10 @@
 
 
 <!-- START section__type-nav -->
-<nav class="section__type-nav " uk-navbar>
+<nav class="section__type-nav" uk-navbar>
 <!-- START .uk-navbar-left -->
 <div class="uk-navbar-left">
-   
+   <img src="http://localhost:8000/wp-content/uploads/2020/06/fivesteps.png"  width="50%" />
 </div>
 <!-- END .uk-navbar-left -->
 <!-- START .uk-navbar-right -->
