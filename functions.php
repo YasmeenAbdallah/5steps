@@ -28,14 +28,16 @@ add custom menu support
 Registers a navigation menu location for a theme.
 */ 
 function register_custom_menu(){
-    register_nav_menu('uikit-menu',__('nav bar'));
+    register_nav_menu('uikitPrimary-menu',__('primary nav-bar'));
 }
 /* function to control the nav  */
-function uikit_menu(){
+function Primary_nav_menu(){
     wp_nav_menu(array(
-        'theme_location' =>'uikit-menu',
-        'menu_class' =>'uk-navbar-nav'
-
+        'theme_location'  =>'uikitPrimary-menu',
+        'menu_class'      =>'uk-navbar-nav',
+        'menu_id'         =>'right_menu',
+        'container'       => 'div',
+        'depth'          => 2
     ));
 }
 

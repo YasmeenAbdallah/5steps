@@ -13,8 +13,9 @@
    
 </head>
 
+
 <!-- START section__type-nav -->
-<nav class="uk-navbar-container" uk-navbar>
+<nav class="section__type-nav " uk-navbar>
 <!-- START .uk-navbar-left -->
 <div class="uk-navbar-left">
    
@@ -22,10 +23,10 @@
 <!-- END .uk-navbar-left -->
 <!-- START .uk-navbar-right -->
 <div class="uk-navbar-right">
-<ul class="uk-navbar-nav">
+<ul class="uk-navbar-nav " id='right_menu'>
     
-    <li><a href="#"> <?php
-    uikit_menu();?></a></li>
+    <li><?php
+    Primary_nav_menu();?></li>
        
             </ul>
     

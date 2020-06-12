@@ -1,0 +1,36 @@
+.section__type-nav {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  .uk-navbar-right {
+    margin-right: 70px;
+    margin-top: 10px;
+    ul {
+      li {
+        a {
+          color: $color__secondary;
+          font-size: 15px;
+          font-family: monospace;
+        }
+        .nav__cta {
+          background-color: $color__main;
+          border-radius: 4px;
+          font-weight: bold;
+          margin-top: 5px;
+          a {
+            color: $color__white;
+            font-weight: 800;
+            span {
+              /*nav__link::before {
+    border-bottom: 2px solid #303d71 !important;
+              font-size: 18px;
+              text-transform: capitalize;
+              color: #303d71 !important;
+              transition: 300ms;
+              font-family: AvenirNext, "sans-serif";
+            */
+            }
+          }
+        }
+      }
+    }
+  }
+}
