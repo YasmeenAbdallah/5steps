@@ -14,17 +14,17 @@
         <!-- START .hero__type-content -->
         <div class='hero__type-content'>
           <h1><?php the_title(); ?></h1>
+          <a href="" class="hero__content-button">Get a free Quote</a>
         </div>
         <!-- END .hero__type-content -->
         
         <!-- START .hero__type-img -->
         <div class='hero__type-img'>
-         <img src="<?php the_post_thumbnail(); ?>">
+         <?php the_post_thumbnail(); ?>
         </div>
         <!-- END .hero__type-img -->
        
-            
-        
+                  
 </div>
 </div>
  <?php  

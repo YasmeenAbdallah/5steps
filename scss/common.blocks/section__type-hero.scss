@@ -8,5 +8,17 @@
       margin: 100px;
       font-size: 60px;
     }
+    a {
+      background-color: $color__secondary;
+      color: $color__white;
+      padding: 8px 40px;
+      font-size: 25px;
+      margin-right: 30%;
+      border: 1px solid $color__secondary;
+      &:hover {
+        background-color: $color__white;
+        color: $color__secondary;
+      }
+    }
   }
 }

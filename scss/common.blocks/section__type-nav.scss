@@ -1,17 +1,36 @@
+@mixin animationLine {
+  width: 4px;
+  background-color: red($color: #000000);
+  transition: width 0.5s ease, background-color 0.5s ease;
+}
+
 .section__type-nav {
   .uk-navbar-left {
     margin: 0px 70px;
   }
   .uk-navbar-right {
     margin-right: 70px;
-    margin-top: 10px;
+    margin-top: 40px;
     ul {
       li {
         a {
+          display: inline-block;
           color: $color__secondary;
           font-size: 15px;
           font-family: monospace;
+          &:after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 2px;
+            background: $color__secondary;
+            transition: width 0.3s;
+          }
+          &:hover::after {
+            width: 100%;
+          }
         }
+
         .nav__type-dropdown {
           display: none !important;
         }
@@ -19,24 +38,12 @@
           display: block;
           background-color: $color__main;
           height: 40px;
-
           border-radius: 4px;
           font-weight: bold;
-          margin-top: 20px;
+
           a {
             color: $color__white;
-            padding-bottom: 37px;
-
-            span {
-              /*nav__link::before {
-    border-bottom: 2px solid #303d71 !important;
-              font-size: 18px;
-              text-transform: capitalize;
-              color: #303d71 !important;
-              transition: 300ms;
-              font-family: AvenirNext, "sans-serif";
-            */
-            }
+            margin-top: 8px;
           }
         }
       }
