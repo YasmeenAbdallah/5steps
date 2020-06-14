@@ -14,14 +14,12 @@
         <!-- START .hero__type-content -->
         <div class='hero__type-content'>
           <h1><?php the_title(); ?></h1>
-   
-
         </div>
         <!-- END .hero__type-content -->
         
         <!-- START .hero__type-img -->
         <div class='hero__type-img'>
-         <img src="http://localhost:8000/wp-content/uploads/2020/06/working.png">
+         <img src="<?php the_post_thumbnail(); ?>">
         </div>
         <!-- END .hero__type-img -->
        
