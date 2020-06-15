@@ -40,9 +40,31 @@ function Primary_nav_menu(){
         'depth'          => 0
     ));
 }
+// for flexible custom header
+$args = array(
+    'flex-width'    => true,
+    'width'         => 980,
+    'flex-height'   => true,
+    'height'        => 200,
+    'default-image' => get_template_directory_uri() . '/images/header.jpg',
+);
+//To enable Custom Headers 
+add_theme_support( 'custom-header',$args );
 
 //add featured image support
 add_theme_support( 'post-thumbnails' );
+//enable the use of a custom logo 
+function themename_custom_logo_setup() {
+ $defaults = array(
+ 'height'      => 50,
+ 'width'       => 300,
+ 'flex-height' => true,
+ 'flex-width'  => true,
+ 'header-text' => array( 'site-title', 'site-description' ),
+ );
+ add_theme_support( 'custom-logo', $defaults );
+}
+add_action( 'after_setup_theme', 'themename_custom_logo_setup' );
 
 
 /*

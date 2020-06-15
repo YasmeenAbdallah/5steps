@@ -18,7 +18,13 @@
 <nav class="section__type-nav" uk-navbar>
 <!-- START .uk-navbar-left -->
 <div class="uk-navbar-left">
-   <img src="http://localhost:8000/wp-content/uploads/2020/06/fivesteps.png"  width="50%" />
+    <?php
+if ( has_custom_logo() ) {
+        the_custom_logo() ;
+} else {
+        echo '<h1>'. get_bloginfo( 'name' ) .'</h1>';
+}
+?>
 </div>
 <!-- END .uk-navbar-left -->
 <!-- START .uk-navbar-right -->
