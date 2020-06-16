@@ -1,12 +1,5 @@
-@mixin animationLine {
-  width: 4px;
-  background-color: red($color: #000000);
-  transition: width 0.5s ease, background-color 0.5s ease;
-}
-
 .section__type-nav {
   .uk-navbar-left {
-    margin: 0px 70px;
   }
   .uk-navbar-right {
     margin-right: 70px;

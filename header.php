@@ -15,7 +15,7 @@
 
 
 <!-- START section__type-nav -->
-<nav class="section__type-nav" uk-navbar>
+<nav class="section__type-nav uk-container" uk-navbar>
 <!-- START .uk-navbar-left -->
 <div class="uk-navbar-left">
     <?php
