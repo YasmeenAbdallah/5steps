@@ -15,8 +15,11 @@
     <!-- END .hero__type-content -->
     <!-- START .hero__type-img -->
         <div class='hero__type-img'>
-         <?php $hero_img= get_field('hero_img')['sizes']['large']; ?>
-        <img src="<?php echo $hero_img;?>">
+         <?php
+         
+           the_post_thumbnail(); ?>
+         
+        <!--<img src="<?php //echo $hero_img;?>">-->
         </div>
     <!-- END .hero__type-img -->                 
 </div>

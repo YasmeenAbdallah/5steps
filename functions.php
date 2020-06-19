@@ -62,7 +62,79 @@ function themename_custom_logo_setup() {
  );
  add_theme_support( 'custom-logo', $defaults );
 }
+/* 
+** start th acf blocks
+*/
+ 
+// check function exists.
+ if( function_exists('acf_register_block_type') ) {
+//add th acf action
+add_action('acf/init', 'my_register_blocks');
+    }
+function my_register_blocks() {
 
+    
+
+        // register a testimonial block.
+        acf_register_block_type(array(
+            'name'                => 'Hero',
+            'title'                => __('Hero'),
+            'description'        => __('A custom Hero block.'),
+            'render_callback'    => 'section_block_callback',
+            'category'            => 'formatting',
+            'icon'                => 'admin-comments',
+            'keywords'            => array('hero'),
+            /*'render_tempaltes'
+            enqueue_style
+            */
+           
+        ));
+    }
+
+
+/*
+function my_acf_init()
+{
+    // check function exists
+        // register hero block
+        acf_register_block_type(array(
+            'name'                => 'hero',
+            'title'               => __('hero'),
+            'description'         => __('the hero section.'),
+            //'render_callback'     => 'section_block_callback',
+            'category'            => 'hero',
+            //to make it more searchable
+            'keywords'            => array('hero','home'),
+        ));
+    }
+
+
+
+function my_acf_add_local_field_groups() {
+	
+	acf_add_local_field_group(array(
+		'key' => 'group_1',
+		'title' => 'My Group',
+		'fields' => array (
+			array (
+				'key' => 'field_1',
+				'label' => 'Sub Title',
+				'name' => 'sub_title',
+				'type' => 'text',
+			)
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'post',
+				),
+			),
+		),
+	));
+	
+}*/
 
 
 
@@ -79,5 +151,6 @@ add_action('wp_enqueue_scripts','add_script');
 add_action('init','register_custom_menu');
 // add_action for logo
 add_action( 'after_setup_theme', 'themename_custom_logo_setup' );
+
 
 ?>
