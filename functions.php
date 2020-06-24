@@ -52,7 +52,7 @@ function register_custom_menu(){
      register_nav_menu('footer-menu1',__('footer location one'));
       register_nav_menu('footer-menu2',__('footer location two'));
 }
-/* function to control the nav  */
+/* function to control the primary nav  */
 function Primary_nav_menu(){
     wp_nav_menu(array(
         'theme_location'  =>'uikitPrimary-menu',
@@ -60,6 +60,20 @@ function Primary_nav_menu(){
         'menu_id'         =>'right_menu',
         'container'       => 'div',
         'depth'          => 0
+    ));
+}
+/* function to control the footer menu 1  */
+function footer_location_2(){
+    wp_nav_menu(array(
+        'theme_location'  =>'footer-menu2',
+        
+    ));
+}
+/* function to control the footer menu 2  */
+function footer_location_1(){
+    wp_nav_menu(array(
+        'theme_location'  =>'footer-menu1',
+        
     ));
 }
 // for flexible custom header
