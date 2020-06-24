@@ -1,6 +1,6 @@
 
 <!-- START .section__type-footer -->
-    <footer id="footer" class='section__type-footer '>
+    <footer id="footer" class='section__type-footer  '>
         <!--START .uk-container-->
         <div class='uk-container'>
             <!--START .footer__type-content-->

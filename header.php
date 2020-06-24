@@ -32,14 +32,16 @@ if ( has_custom_logo() ) {
 <!-- START .uk-navbar-right -->
 <div class="uk-navbar-right">
 <ul class="uk-navbar-nav " id='right_menu'>
-    
-    <li><?php
+    <!-- if i want to amke my own nav with check the page and it's childs to make the link on
+    <li <?php// if(is_page( 'about-us' )or wp_get_post_parent_id( 0 )==137) echo 'class="current-menu-item"'?>>
+    <a href="<?php //echo site_url( 'http://localhost:8000/?page_id=137' )?>">About Us</a></li>-->
+    <?php
     Primary_nav_menu();?></li>
        
             </ul>   
 </div>
 <!-- END .uk-navbar-right -->
-</nav>
+</nav>  
 <!-- END .section__type-nav -->
 
 

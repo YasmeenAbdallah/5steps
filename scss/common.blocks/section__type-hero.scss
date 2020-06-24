@@ -1,27 +1,26 @@
 .section__type-hero {
-  width: 100px;
-  .hero__type-content {
-    h1 {
-      line-height: 1.28;
-      font-weight: bolder;
+  h1 {
+    line-height: 1.28;
+    font-weight: bolder;
+    color: $color__secondary;
+    text-align: center;
+    margin-top: 100px;
+    font-size: 60px;
+  }
+  a {
+    background-color: $color__secondary;
+    color: $color__white;
+    padding: 8px 40px;
+    font-size: 25px;
+    border-radius: 30%;
+    margin-top: 50px;
+    border: 1px solid $color__secondary;
+    &:hover {
+      background-color: $color__white;
       color: $color__secondary;
-      text-align: center;
-      margin: 35px;
-      font-size: 60px;
-    }
-    a {
-      background-color: $color__secondary;
-      color: $color__white;
-      padding: 8px 40px;
-      font-size: 25px;
-      margin-right: 30%;
-      border: 1px solid $color__secondary;
-      &:hover {
-        background-color: $color__white;
-        color: $color__secondary;
-      }
     }
   }
+
   .hero__type-img {
     background-repeat: no-repeat;
   }
