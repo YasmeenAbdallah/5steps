@@ -2,13 +2,15 @@
 <html <?php language_attributes();?>>
 <head>
     <meta charset="<?php bloginfo('charset');?>">
+    <meta name ="viewport" content="width= device-width , intial-scale=1" >
     <!--get the ttile from bloginfo-->
     <title><?php bloginfo('name');?></title> 
     <!--Pings back the links found in a post.-->
     <link rel="pingback" href="<?php  bloginfo('pingback_url');?>"/>
     <?php wp_head(); ?>
 </head>
-<body>
+<!-- it give us the info about the current screen-->
+<body <?php body_class(  )?>>
    
    
 </head>
@@ -34,10 +36,10 @@ if ( has_custom_logo() ) {
     <li><?php
     Primary_nav_menu();?></li>
        
-            </ul>
-    
-    
+            </ul>   
 </div>
 <!-- END .uk-navbar-right -->
 </nav>
 <!-- END .section__type-nav -->
+
+

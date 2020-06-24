@@ -1,10 +1,11 @@
 
 <!--START .section__type-hero-->
     <section class="section__type-hero uk-contianer">
-     <?php $home_catquery = new WP_Query( array( 'category_name' => 'home' )); ?> 
+     <?php/* $home_catquery = new WP_Query( array( 'category_name' => 'home' )); ?> 
      <!-- check if we have posts  -->
     <?php  if ( $home_catquery->have_posts() ): ?> 
-    <?php while($home_catquery->have_posts()) : $home_catquery->the_post(); ?>
+    <?php while($home_catquery->have_posts()) : $home_catquery->the_post(); */?>
+
      <!-- START .hero__background  -->
    <div class="uk-grid-column-small uk-grid-row-large uk-child-width-1-2@s uk-text-center" uk-grid>
     <!-- START .hero__type-content -->
@@ -16,20 +17,20 @@
     <!-- START .hero__type-img -->
         <div class='hero__type-img'>
          <?php
-         
-           the_post_thumbnail(); ?>
-         
-        <!--<img src="<?php //echo $hero_img;?>">-->
+           
+         //  the_post_thumbnail(); 
+          echo get_theme_file_uri( '/images/hero.png' );          ?>
+        
         </div>
     <!-- END .hero__type-img -->                 
 </div>
 </div>
- <?php  
+ <?php /* 
  //END wordpress loop
              endwhile;
              //END if condition
              endif;
-            ?>
+            */?>
 
     </section>
     <!--END .section__type-hero-->

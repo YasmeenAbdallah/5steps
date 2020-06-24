@@ -1,4 +1,5 @@
 .section__type-hero {
+  width: 100px;
   .hero__type-content {
     h1 {
       line-height: 1.28;
@@ -20,5 +21,8 @@
         color: $color__secondary;
       }
     }
+  }
+  .hero__type-img {
+    background-repeat: no-repeat;
   }
 }

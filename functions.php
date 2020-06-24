@@ -23,12 +23,34 @@ function add_script(){
 
 }
 
+
+//function for my theme features that i want to add
+function FiveSteps_featuers(){
+//To enable Custom Headers 
+add_theme_support( 'custom-header',$args );
+
+//add featured image support
+add_theme_support( 'post-thumbnails' );
+//add title-tag support
+add_theme_support( 'title-tag');
+//enable the use of a custom logo 
+$defaults = array(
+ 'height'      => 50,
+ 'width'       => 200,
+ 'header-text' => array( 'site-title', 'site-description' ),
+ );
+ add_theme_support( 'custom-logo', $defaults );
+}
+
+
 /*
 add custom menu support
 Registers a navigation menu location for a theme.
 */ 
 function register_custom_menu(){
     register_nav_menu('uikitPrimary-menu',__('primary nav-bar'));
+     register_nav_menu('footer-menu1',__('footer location one'));
+      register_nav_menu('footer-menu2',__('footer location two'));
 }
 /* function to control the nav  */
 function Primary_nav_menu(){
@@ -48,20 +70,9 @@ $args = array(
     'height'        => 200,
     'default-image' => get_template_directory_uri() . '/images/header.jpg',
 );
-//To enable Custom Headers 
-add_theme_support( 'custom-header',$args );
 
-//add featured image support
-add_theme_support( 'post-thumbnails' );
-//enable the use of a custom logo 
-function themename_custom_logo_setup() {
- $defaults = array(
- 'height'      => 50,
- 'width'       => 200,
- 'header-text' => array( 'site-title', 'site-description' ),
- );
- add_theme_support( 'custom-logo', $defaults );
-}
+
+
 /* 
 ** start th acf blocks
 */
@@ -72,9 +83,6 @@ function themename_custom_logo_setup() {
 add_action('acf/init', 'my_register_blocks');
     }
 function my_register_blocks() {
-
-    
-
         // register a testimonial block.
         acf_register_block_type(array(
             'name'                => 'Hero',
@@ -92,51 +100,6 @@ function my_register_blocks() {
     }
 
 
-/*
-function my_acf_init()
-{
-    // check function exists
-        // register hero block
-        acf_register_block_type(array(
-            'name'                => 'hero',
-            'title'               => __('hero'),
-            'description'         => __('the hero section.'),
-            //'render_callback'     => 'section_block_callback',
-            'category'            => 'hero',
-            //to make it more searchable
-            'keywords'            => array('hero','home'),
-        ));
-    }
-
-
-
-function my_acf_add_local_field_groups() {
-	
-	acf_add_local_field_group(array(
-		'key' => 'group_1',
-		'title' => 'My Group',
-		'fields' => array (
-			array (
-				'key' => 'field_1',
-				'label' => 'Sub Title',
-				'name' => 'sub_title',
-				'type' => 'text',
-			)
-		),
-		'location' => array (
-			array (
-				array (
-					'param' => 'post_type',
-					'operator' => '==',
-					'value' => 'post',
-				),
-			),
-		),
-	));
-	
-}*/
-
-
 
 /*
 add_action() finction
@@ -149,8 +112,8 @@ add_action('wp_enqueue_scripts','add_script');
 //add_action for menu
  
 add_action('init','register_custom_menu');
-// add_action for logo
-add_action( 'after_setup_theme', 'themename_custom_logo_setup' );
+//add action for my theme featuers
+add_action('after_setup_theme','FiveSteps_featuers')
 
 
 ?>
