@@ -31,7 +31,7 @@ the_post(  );?>
      <p class="uk-article-lead"><?php the_excerpt(  );?></p>
        
            <button class="uk-button uk-button-link uk-button-small">
-          <a href="<?php get_permalink( );?>"> continue reading </a></button>
+          <a href="<?php get_permalink( );?>"> continue reading &raquo;</a></button>
           <hr class="uk-article-divider">
      </article>
 <?php

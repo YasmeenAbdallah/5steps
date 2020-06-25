@@ -18,8 +18,8 @@ function add_styles(){
 function add_script(){
 
     //UIkit js 
-    wp_enqueue_script( 'uikit-js', '//cdn.jsdelivr.net/npm/uikit@3.5.3/dist/js/uikit.min.js', array( 'jquery' ), false, false  );
-    wp_enqueue_script( 'uikit-JS ','//cdn.jsdelivr.net/npm/uikit@3.5.3/dist/js/uikit-icons.min.js',array() , false ,false);
+    wp_enqueue_script( 'uikit-js', '//cdn.jsdelivr.net/npm/uikit@3.5.3/dist/js/uikit.min.js', array( 'jquery' ), false, true  );
+    wp_enqueue_script( 'uikit-JS ','//cdn.jsdelivr.net/npm/uikit@3.5.3/dist/js/uikit-icons.min.js',array() , false ,true);
 
 }
 
@@ -98,20 +98,36 @@ add_action('acf/init', 'my_register_blocks');
     }
 function my_register_blocks() {
         // register a testimonial block.
-        acf_register_block_type(array(
-            'name'                => 'Hero',
-            'title'                => __('Hero'),
-            'description'        => __('A custom Hero block.'),
-            'render_callback'    => 'section_block_callback',
-            'category'            => 'formatting',
-            'icon'                => 'admin-comments',
-            'keywords'            => array('hero'),
-            /*'render_tempaltes'
-            enqueue_style
-            */
-           
-        ));
+   add_guttenberg_block('hero');
+
+
+
     }
+        function add_guttenberg_block($blockname)
+        {
+            // register card block
+            acf_register_block(array(
+                'name'                => $blockname,
+                'title'                => __($blockname),
+                'description'        => __('A custom block.'),
+                'render_callback'    => 'section_block_callback',
+                'category'            => 'custom_blocks',
+                'icon'                => 'admin-comments',
+            ));
+        }
+        /*********************************************
+ *               Blocks Callback              *
+ **********************************************/
+function section_block_callback($block)
+{
+    // convert name ("acf/testimonial") into path friendly slug ("testimonial")
+    $slug = str_replace('acf/', '', $block['name']);
+    // include a template part from within the "template-parts/block" folder
+    if (file_exists(get_theme_file_path("block/{$slug}.php"))) {
+        include(get_theme_file_path("block/{$slug}.php"));
+    }
+}
+    
 
 
 
