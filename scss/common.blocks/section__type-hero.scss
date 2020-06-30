@@ -1,11 +1,12 @@
 .section__type-hero {
   h1 {
     line-height: 1.28;
-    font-weight: bolder;
     color: $color__secondary;
     text-align: center;
-    margin-top: 100px;
-    font-size: 60px;
+    font-size: 55px;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    font-weight: bold;
+    padding: 40px;
   }
   a {
     background-color: $color__secondary;
@@ -13,7 +14,7 @@
     padding: 8px 40px;
     font-size: 25px;
     border-radius: 30%;
-    margin-top: 50px;
+    margin: 50px 245px;
     border: 1px solid $color__secondary;
     &:hover {
       background-color: $color__white;

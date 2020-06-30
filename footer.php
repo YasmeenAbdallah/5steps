@@ -3,16 +3,21 @@
 <!-- START .section__type-footer -->
     <footer id="footer" class='section__type-footer  '>
         <!--START .uk-container-->
-        <div class='uk-container'>
+        <div class=''>
             <!--START .footer__type-content-->
 
-            <div class='uk-grid uk-child-width-1-3@m uk-margin-top' uk-grid="uk-margin">
+            <div class='uk-grid uk-child-width-1-5@m uk-margin-top' uk-grid="uk-margin">
+                <div>
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/footer1.png" width="100%" height="" alt="" />  
+</div>
 
                 <!--START .content__type-list-->
                 <div>
                     <h3>CONTACT INFO</h3>
                     <ul class="uk-list quick-link">
+                        <li>
                         <?php footer_location_1();?>
+</li>
                     </ul>
                 </div>
                 <!--END .content__type-list-->
@@ -23,6 +28,7 @@
                     <ul class="uk-list quick-link">
                         <li>
                            <?php footer_location_2();?>
+</li>
                     </ul>
                 </div>
                 <!--END .content__type-list-->
@@ -36,14 +42,17 @@
 
                 </div>
                 <!--END .content__type-list-->
+                 <div>
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/footer2.png" width="100%" height="" alt="" />  
+</div>
                 
             </div>
             <!--END .uk-container-->
 
             <!--START .content__type-copyRight-->
             <div class='uk-text-center uk-container'>
-                <p> © 2017-2020 Mr. Fix It Enterprises Inc | 12173 Colony Preserve Dr. | (561) 809-9997<br />
-                    Boynton Beach, Fl, 33436 | License number : CC# 17-GD-201912-X -- U-22257 | Developed by
+                <p> © 2017-2020 Five steps It Enterprises Inc | 12173 Colony Preserve Dr. | (561) 809-9997<br />
+                    Boynton Beach, Fl, 33436 | License number : CC# 17-GD-201912-X -- U-22257 | Developed by yasmeen
                    </p>
             </div>
             <!--END .content__type-copyRight-->
