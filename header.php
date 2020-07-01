@@ -36,7 +36,7 @@ if ( has_custom_logo() ) {
     <li <?php// if(is_page( 'about-us' )or wp_get_post_parent_id( 0 )==137) echo 'class="current-menu-item"'?>>
     <a href="<?php //echo site_url( 'http://localhost:8000/?page_id=137' )?>">About Us</a></li>-->
     <?php
-    Primary_nav_menu();?></li>
+    Primary_nav_menu();?>
        
             </ul>   
 </div>

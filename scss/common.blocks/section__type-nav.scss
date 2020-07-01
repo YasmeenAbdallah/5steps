@@ -22,22 +22,18 @@
           &:hover::after {
             width: 100%;
           }
-        }
+          .nav__cta {
+            display: block;
+            background-color: $color__main;
+            height: 40px;
+            border-radius: 4px;
+            font-weight: bold;
+            margin-top: -7px;
 
-        .nav__type-dropdown {
-          display: none !important;
-        }
-        .nav__cta {
-          display: block;
-          background-color: $color__main;
-          height: 40px;
-          border-radius: 4px;
-          font-weight: bold;
-          margin-top: -7px;
-
-          a {
-            color: $color__white;
-            margin-top: 8px;
+            a {
+              color: $color__white;
+              margin-top: 8px;
+            }
           }
         }
       }
