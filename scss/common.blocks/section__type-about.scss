@@ -1,5 +1,17 @@
 .section__type-about {
-  .content__type-img {
-    border-radius: 50%;
+  h1 {
+    color: $color__secondary;
+  }
+  span {
+    color: $color__main;
+  }
+  h3 {
+    color: $color__secondary;
+  }
+  .about__posts-btn {
+    background-color: $color__main;
+  }
+  .about__events-btn {
+    background-color: $color__secondary;
   }
 }

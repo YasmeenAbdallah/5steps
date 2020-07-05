@@ -3,6 +3,7 @@ const gulp = require("gulp");
 
 // define sass
 const sass = require("gulp-sass");
+const autoprefixer = require("gulp-autoprefixer");
 //php minfy
 //const phpMinify = require("@cedx/gulp-php-minify");
 //compile sass
@@ -15,6 +16,7 @@ gulp.task("sass", () => {
   return gulp
     .src("./scss/*.scss")
     .pipe(sass())
+    .pipe(autoprefixer())
     .pipe(cssmin())
     .pipe(gulp.dest("./des"));
 });
